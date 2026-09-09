@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en"> 															
+  <head> 																	
+    <meta charset="UTF-8">
+<!---set up for mobile phones-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathan Velasquez Resume</title> 														
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body> 																	
+	<header>
+		<img src="images/abstract-horizontal.svg" alt="">
+<!------------------------------>
+<!---------NAME ANIMATION------->
+<!------------------------------>
+		<div id="topName">
+			<span class="letter">N</span>
+			<span class="letter">a</span>
+			<span class="letter">t</span>
+			<span class="letter">h</span>
+			<span class="letter">a</span>
+			<span class="letter">n</span>
+			&nbsp;
+			<span class="letter">V</span>
+			<span class="letter">e</span>
+			<span class="letter">l</span>
+			<span class="letter">a</span>
+			<span class="letter">s</span>
+			<span class="letter">q</span>
+			<span class="letter">u</span>
+			<span class="letter">e</span>
+			<span class="letter">z</span>
+		</div>
+<!------------------------------>
+<!---------Page Title ---------->
+<!------------------------------>
+			<h1>Resume</h1> 												
+<!------------------------------>
+<!-------Navigation links------->
+<!------------------------------>
+		<nav> 																
+			<ul class="nav-big">
+				<li><a class="link" href="cover_letter.html">Cover letter</a></li>
+				<li><a class="link" href="career_goals.html">Career Goals</a></li>
+				<li><a class="link" href="career_goals.html#contact">Contact</a></li>
+			</ul>
+			<select name="nav-small" id="nav-small" class="nav-small" onchange="location.href=this.value; this.selectedIndex=0;">
+				<option value="">☰</option>
+				<option value="cover_letter.html">Cover letter</option>
+				<option value="career_goals.html">Career Goals</option>
+				<option value="career_goals.html#contact">Contact</option>
+			</select>
+		</nav>
+	</header>
+<!------------------------------>
+<!---------Main content--------->
+<!------------------------------>
+<main> 																	
+	<article>
+		<section> 															
+			<h2>Target Role: 
+			<br>Helpdesk / AV / IT Support Specialist</h2>
+				<!---different size images for mobile phones-->	
+				<img class="mainImage" 
+				src="images/resume-small.png"
+				srcset="images/resume-small.png 400w,
+						images/resume-med.png 800w,
+						images/resume-large.png 1200w"
+				sizes="(max-width: 800px) 90vw, 600px"
+				alt="resume stock image">
+			<h3>Key Snapshot</h3>
+				<p>
+					West Valley City, Utah | 801-895-5918 | nathanvelasquez895@gmail.com
+					<br>
+					<a href="placeholderlink.html" target="_blank">LinkedIn</a> | <!--- placeholder for https://www.linkedin.com/in/nathan-b-velasquez/-->
+					<a href="placeholderlink.html" target="_blank">GitHub</a> <!--- placeholder for https://github.com/nathanvelasquez895-->
+				</p>
+			<ul class="list1">
+				<li>
+					<strong>Education:</strong> Student - B.S. of Computer Science - Western Governors University 
+					<!--- <details> makes a dropdown box for the image -->
+					<details class="dropdown-box">
+						<!--- <summary> is the visible text to click  -->
+						<summary class="dropdown">See my current progress</summary>
+						<div class="hiddenImage">
+							<img src="images/wgu.png" alt="WGU Course Progress Dashboard">
+						</div>
+					</details>
+				</li>
+				<li>
+					<strong>Certifications:</strong> CompTIA A+ Certification | <i>Issued February 2026</i> 
+					<a href="placeholderlink.html" target="_blank"><em>View Credly Badge</em></a> <!--- placeholder for https://www.credly.com/badges/d84322b7-c60b-4d8c-9104-c4aea2ad9382 -->
+				</li>
+				<li>
+					<strong>Core Strengths:</strong> Tier 1 Troubleshooting, Active Directory, Windows/Linux Administration, Custom Scripting, ServiceNow ITSM
+				</li>
+			</ul>
+		</section>
+	<hr>
+		<section class="tableBox">							
+			<table>
+				<caption>Core skills and tools</caption>
+					<thead>
+						<tr>
+							<th>Skill Area</th>
+							<th>Tools & Technologies</th>
+							<th>Key Capabilities</th>
+							<th>Relevant Background</th>
+						</tr>
+					</thead>
+					<tr>
+						<td>User Training & Service</td>
+						<td>SOPs, Documentation, Accessible Language</td>
+						<td>Patient de-escalation, staff onboarding, clear instruction</td>
+						<td>Group Home Manager & Support Roles</td>
+					</tr>
+					<tr>
+						<td>Systems & Support</td>
+						<td>Active Directory, ServiceNow, RDP</td>
+						<td>User administration, incident logging, remote desktop</td>
+						<td>IT Support Simulation & Coursework</td>
+					</tr>
+					<tr>
+						<td>Hardware & OS</td>
+						<td>Windows, Linux CLI, PC Components</td>
+						<td>Custom builds, drive data recovery, system diagnostics</td>
+						<td>Personal & Daily Lab Environments</td>
+					</tr>
+				</table>
+		</section>
+	<hr>
+		<section>
+			<h3>Featured Project Highlights</h3>
+			<ul class="list1">
+				<li>
+					<strong>Active Directory & Helpdesk Simulation Video:</strong> 
+					<details class="dropdown-box">
+						<summary class="dropdown">Watch video now</summary>
+						<video class="video" controls width="500">
+							<source src="images/helpdesk.mp4"  type="video/mp4">
+						</video>
+					</details> 
+					<ul class="list2">
+						<li>
+							Created a video walkthrough resolving simulated Tier 1 tickets (locked accounts, 
+							network printers) utilizing ServiceNow ITSM workflows and Active Directory domain tools.
+						</li>
+					</ul>
+				</li>
+				<li>
+					<strong>Discrete Mathematics II Prompt Engineering Web Application:</strong> 
+					<br><a href="placeholderlink.html" target="_blank"><em>View project</em></a> <!--- placeholder for https://nathanvelasquez895.github.io/DM2-C690-NV.github.io/ -->
+					<ul class="list2">
+						<li>
+							Features JavaScript, HTML5, CSS3, JSON, Prompt Engineering
+						</li>
+						<li>
+							Designed and built an interactive study web app featuring a library of 490 engineered prompts covering Discrete Math II topics.
+						</li>
+						<li>
+							Engineered strict multi-phase system prompt logic featuring anti-hallucination guardrails, self-verification blocks, and scaffolded step-by-step problem generation.
+						</li>
+						<li>
+							Built UI features including custom timers, star rating/difficulty tracking, search filtering, practice test mode toggles, and cross-platform AI formatting (Copilot/Other LLMs).
+						</li>	
+					</ul>
+				</li>
+				<li>
+					<strong>linux-middle-mouse-autoscroll | Shell / Python:</strong> 
+					<br><a href="placeholderlink.html" target="_blank"><em>View project</em></a> <!--- placeholder for https://github.com/nathanvelasquez895/linux-middle-mouse-autoscroll  -->
+					<ul class="list2">
+						<li>
+							Project managed, QA tested and published directed LLM engineered code to create an open-source Linux autoscroll utility using Bash and Python.
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+	<hr>
+		<section>
+			<h3>Work Experience</h3>
+			<ul class="list1">
+				<li>
+					<strong>AI Data Annotator | Data Annotation | Remote | Apr 2026 – Present:</strong> 
+					<ul class="list2">
+						<li>
+							Evaluate AI-generated code, technical documentation, and logic outputs for accuracy, efficiency, and structural clarity.
+						</li>
+						<li>
+							Apply critical thinking and technical research to validate complex problem-solving workflows and model reasoning.
+						</li>
+						<li>
+							Provide structured, detailed feedback to improve AI model reliability, edge-case performance, and output quality.
+						</li>
+					</ul>
+				</li>
+				<li>
+					<strong>Security Guard | All Pro Security | Lehi, UT | June 2026 – Present:</strong> 
+					<ul class="list2">
+						<li>
+							Utilize conflict resolution skills with the general public to ensure physical and operational security.
+						</li>
+						<li>
+							Maintain precise, real-time activity and incident logs in strict accordance with company SOPs and regulatory standards.
+						</li>
+						<li>
+							Monitor facility access points, detect potential hazards, and enforce safety compliance throughout assigned shifts.
+						</li>
+					</ul>
+				</li>
+				<li>
+					<strong>Direct Support Professional / Group Home Manager | CTA Community Supports | West Jordan, UT | May 2022 – Apr 2026:</strong> 
+					<ul class="list2">
+						<li>
+							Trained 15+ staff members on internal software tools, documentation standards, and data entry workflows.
+						</li>
+						<li>
+							Resolved account access issues, software glitches, and process bottlenecks using internal SOPs and knowledge bases.
+						</li>
+						<li>
+							Maintained high regulatory compliance through accurate GER reporting and meticulous record-keeping.
+						</li>
+					</ul>
+				</li>
+			</ul>
+		<section>	
+	</article>	
+<!------------------------------>
+<!---------Footer--------------->
+<!------------------------------>
+	<footer>
+		<em>
+			Nathan Velasquez  
+			<br> 
+			<a class="foot" href="mailto:nathanvelasquez895@gmail.com">nathanvelasquez895@gmail.com</a> 
+			&nbsp;&nbsp;
+			<a class="foot" href="tel:+18018955918">801&#8209;895&#8209;5918</a> 
+			<br>
+		</em>
+		<i>
+			<a class="foot" target="_blank" style="font-size: 10px;" href="placeholderlink.html">Mesh Lines Vectors by Vecteezy</a> <!-- placeholder for https://www.vecteezy.com/free-vector/mesh-lines-->
+		</i>
+	</footer>
+</main>
+</body>
+<!------------------------------>
+<!---------Java scripts--------->
+<!------------------------------>
+<script>
+/** VIDEO VOLUME: Prevents ear blasting on the video**/
+document.querySelectorAll('video').forEach(video => 
+{video.volume = 0.3;});/**this means 30% volume**/
+</script>
+</html>  
+

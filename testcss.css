@@ -1,0 +1,24 @@
+         #answer {
+            color: black;
+            width: 100px;
+   
+            animation: moveFraction 1s ease-in-out forwards;
+   
+         }
+   
+         @keyframes moveFraction {
+            0% {
+            color: yellow;
+            transform: translateX(-355px)
+            transform: translateY(60px)
+            }
+            50% {
+            transform: translateX(0px)
+            transform: translateY(60px)
+            }
+            100% {
+            color: red;
+            transform: translateX(0px)
+            transform: translateY(0px)
+            }
+         }

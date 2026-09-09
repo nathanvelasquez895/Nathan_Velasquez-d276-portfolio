@@ -1,0 +1,341 @@
+Class Notes
+
+<============================= HTML =============================>
+
+General formatting:
+	Paragraph - <p>...</p>
+	New line - <br>
+	Group content - <section>...</section>
+	Headlines - <h[1-6]>...</hx>
+	
+Text formatting:
+	Basic:
+		emphasize (italics) - <em>...</em>
+		important (bold) - <strong>...</strong>
+		titles (italics) - <cite>...</cite>
+		highlighter (yellow) - <mark>...</mark>
+		Bold, italics or underline - <b><i><u>...</b></i></u>
+	Lists:
+		Unordered list - wrapped with <ul>..</ul> 
+		Ordered list - wrapped with <ol>..</ol>; type="[1][A][a][I][i]"
+			each bullet <li>..</li>
+			Use symbols - <ul/ol style="list-style-type:[shape]"> 
+	Entity (Special characters):
+		Starts with "&", ends with ";"
+		Word glue - non-breaking hyphen, &#8209; non-breaking space, &nbsp;
+		
+Images:
+	Regular image - <img src="URL" alt="Description" width="x" height="x">
+	Little icon in the tab - <link rel="icon" href="">
+	
+Links: 
+	<a href="URL" target="_x"> text </a> 
+		Page opens in: [new tab = _blank] [same tab = _self]
+		Use image - replace "text" with <img src="...
+	Fragment
+		url.com/stuff#stuff
+		the # takes you to the section
+URLs:
+	Going up directories - add another "../"
+	websites - https:// URL
+	download file - ftp:// URL
+	email - mailto://email address
+	
+Tables:
+	Start - <table>..</table>
+	Title - <caption>..</caption>
+	Row - <tr>..</tr>
+	Header cell - <th scope="col/row">..</th>
+	data cell - <td>..</td>
+		Stretch row/column - <td rowspan="x" colspan="x">...</td>
+	Print header, body, footer info - <thead>..</thead>; <tbody>..</tbody>; <tfoot>..</tfoot>
+	CSS Spacing: padding NOT margin
+	
+Containers:
+	<header> ; <footer> ; <address> ; <main> ; <section> ; <article> ; <nav> ; <aside> ; <div> ; <span>	
+	
+Forms:
+	Example:
+		<form action="URL" target="_blank/self" method="GET/POST" enctype="[multipart/form-data][text/plain]">
+		<p>
+			<label for="id">Example:</label>
+			<input type="text/file" name="id" id="x" value="x">
+		</p>
+		<input type="submit" value="what's written">
+		</form>
+	Make a box to type full sentences = <textarea id="x" name="x" placeholder="x" rows="x" cols="x">...</textarea>
+	Common elements:
+		id: The element's personal name tag. Only one element on the whole page gets this exact tag so the browser and CSS know specifically which one it is.
+		name: The label put on the box when it gets mailed to the server. When someone hits submit, the server looks for this name to know what data it's looking at.
+		type: The shape-shifter setting. Tells the input whether to act like a normal text box, a hidden password field, a clickable button, or a checkable box.
+			-text, password, email, number, tel (phone#), checkbox, radio (one of a few options), submit, button, file, date, color, range (draggable bar), hidden, pattern
+				-checkbox filled by default? write <input... checked>
+				-radio: If the radio button <input type="radio" name="movie" value="ET"> is selected, "movie=ET" is sent to the server.
+				-number uses min/max
+					-number defaults to integers, use step="0.5" to allow halfs etc
+				-range uses 'step="x"' to make increments
+				-pattern allows only certain characters
+				-Encoding type <form...enctype="x">:
+		value: What's actually written inside the box. It's either what the user types in, or the default answer that gets sent off to the server.
+		for: The target pointer for a label. Tells the label "Hey, when someone clicks on my text, go focus on the input box that has this matching ID."
+		maxlength/minlength: How long a string can be
+		size: how big the text box is
+	Drop down menu:
+		<select name="x" size="x" multiple>
+			<option value="x">x</option>
+		</select>
+			-to use "multiple", you'd have to hold ctrl and then click things
+			- datalist (<input list="x") = text+dropdown
+	Custom buttons:
+		<button type="button">
+		  <img src="URL" alt="x"><br>
+		  <strong>x</strong>
+		</button>
+	Group widgets:
+		<fieldset>
+			<legend>Title of group</legend>
+			<input...
+			<label...
+			etc
+		</fieldset>
+	Manditory and autofocus:
+		<input ... autofocus required>
+Audio:
+	Example:
+		<audio controls>
+		  <source src="URL">
+		Your browser does not support the audio element.
+		</audio>
+	Common attributes:
+		autoplay, controls, loop, muted
+Video:
+	Example:
+		<video controls width="500">
+		  <source src="URL.mp4">
+		</video>
+	
+		<iframe width="460" height="250" src="Embedded youtube video"> [Related vids: ?rel=0/1][Autoplay: ?autoplay=0/1][Mute: &mute=0/1]
+		</iframe>
+	Common attributes:
+		autoplay, controls, loop, muted, width
+Scripts:
+	External: <script src="URL"></script>
+	Internal: <script type="text/javascript"></script>
+
+<============================= CSS =============================>
+
+Start:
+	Put <style> in the <head>...</head>
+	Or <link rel="stylesheet" href="styles.css">
+Selectors
+	Element: Ex: p { color: blue; } selects all <p> elements.
+	Class: Ex: h1.notice { color: blue; } selects only <h1> elements with a class="notice" attribute.
+		-Single class: .classname {etc.
+		-Multiple classes: use a space Ex: class="highlight first"
+	ID: Ex: #byLine { color: blue; } selects the element with the id="byLine" attribute.
+	Descendant = element element {etc:
+		Ex: h2 em { color: blue; } selects em elements contained in h2 elements.
+	Pseudo-class:
+		:disabled, :hover, :empty, :lang(language), :nth-child(n)
+			-nth-child -> even, odd, 3 (every 3), n+4 (everything after 4)
+			-.alert-box:empty {display: none;} will hide it until something is there
+		Parts of elements:
+			::after {content: "<"} -> puts a < after whatever is before ::after
+			::before {content "***"} -> puts a *** before whatever is before ::before
+			p::first-line {color: red} -> matches every first like of a <p>
+			p::first-letter {font-size:200%} -> All first letters of <p> get bigger
+			::selection {background: yellow} -> changes all text selected by user
+	Universal: use * to specify "all"
+	Multiple elements: just use a comma between elements. 
+	Child selector:
+		if you want everything inside a certain element to do something, use >
+			Ex. p > em -> makes all the em directly inside the p do something
+	Sibling selector
+		Let E represent a css element.
+		General: E1 ~ E2 will effect every E2 and E2+1 if subsiquent E's are on the same level as E1
+		Adjacent: E1 + E2 will effect E2 if E2 is immediately following E1 on the same level.
+	Attribute selector uses brackets [] to select an elements attribute:
+		Ex: Ex: a[target="_blank"] attribute selector matches anchor elements with a target attribute value of _blank.
+			Exact value: =
+			Whole word: ~=
+			Begins with: ^=
+Common properties:
+	Background:
+		background-color: *color*;
+		background-image: url('URL')
+	Float:
+		Allows text to go around image
+			left, right
+	Clear:
+		Puts it on a lower layer
+			left, right, both
+	Display:
+			Ex: display: block;
+		inline - Displays the element as an inline element, like span or a elements.
+		block - Displays the element as a block element, like p, h1, or div elements.
+		none - Hides the element from being displayed, like style elements.
+		inline-block - Displays the contents of the element as a block element, but formats the element as an inline element.
+		list-item - Displays the contents of the element as a list item element.
+	Variables
+		:root {--main-color: red;} -> any time you say var(--main-color) it will be red now.
+Font:
+	Properties:
+		font-family: property specifies the font family, such as "Times New Roman" or serif.
+		font-size: property changes the font size, such as 120%, small, or 12px.
+		font-weight: property specifies the font weight, such as normal or bold.
+		font-style: property changes the text style, such as normal, italic, or oblique.
+		font-variant: property specifies the variant of the text, such as normal or small-caps.
+		font: is shorthand for setting several font properties at the same time. Ex: font: italic 12pt Georgia, serif;
+	Sizes:
+		xx-small, x-small, small, medium, large, x-large, and xx-large,
+		relative to parent: smaller, larger
+		Absolute size:
+			cm, mm, in, px, pt, pc
+		Relative size (best to use em):
+			em, rem, vw, vh, %
+	Display properties:
+		text-align: left, right, center, justify
+		text-decoration: overline, line-through, underline, none
+		text-transform: uppercase, lowercase, capitalize
+		text-indent: first line indent amount in em
+Box Model:
+	From outside to in. Goes margin - border - padding - content
+		padding + margin:
+			1 value: all 4 sides
+			2 values: top/bottm - left/right
+			3 values: top/right/left - bottom
+			4 values: top/right/bottom/left
+			Specify what side with "-top" Ex: padding-top
+			auto -> to horizontally center something
+			Vertical margins overlap, they don't stack
+		Width/height changes the whole box	
+		Border: 
+			border-width: X px
+			border-color: color;
+			border-style: solid, dashed, dotted, none, double, groove, ridge, inset, outset
+		Centering something:
+		    display: block;
+		    margin-left: auto;
+		    margin-right: auto;
+Flexbox:
+	Flex container: display: flex;
+		flex-direction: row-reverse (right), column, column-reversed (opposite of what you think)
+		gap: px, em
+		justify-content: flex-end (right), center, space between, space-around, space-evenly
+		flex-wrap: wrap, wrap-reverse
+	Flex item properties:
+		flex-basis: length in px, %
+		flex-grow: how much space is assigned to the item
+		flex-shrink: shrink with container - default 1, no shrink 0
+		flex: x y z -> x=grow, y=shrink, z=basis
+			To make side sections with a big main middle part:
+				Have 3 containers with parent using display:flex
+				Each child has flex: 0, 1, xx%. Where left and right is 20% and the middle is 60%
+Grid layout:
+	display: grid; 
+		grid-container is parent to grid item
+		Create columns:
+			grid-template-columns: w x y z -> each variable is width of each column in px or auto
+		Create rows:
+			grid-template-rows: x y z -> each variable is the height of each row
+		Alignment:
+			horizontal: justify-content: start (left), end (right), center, stretch, space-around (evenly spaced), space-between (goes to edges), space-evenly
+			vertical: align-content: start (top), end (bottom), rest is the same as above
+		gap: [row gap] [column gap]
+		grid-row: x / y; start at row x, end at row y
+		grid-column: x / y; start at column x, end at column y 
+		grid-area: w / x / y / z; start at row w & column x, end at row y & column z
+			!important! it ends on the NEXT one that you really want it to end on
+		How to layout a website:
+			1. Make a grid in body with [display: grid][grid-template-columns][grid-template-rows]
+			2. Name every container in body with [grid-area: {name}] (no quotes or anything similar)
+			3. In body, use [grid-template-areas: {return}]
+			4. Draw the grid with the names, ex:
+				"head head head"
+				"nav article aside"
+				"foot foot foot"
+			-EMPTY cell use a period (.)
+Positioning:
+	position: 
+		static (default) 
+		relative (positions relative to default)
+		fixed (relative to a fixed location)
+		absolute (uses anchor)
+	left: positive numbers go RIGHT, negative goes left
+	top: positive numbers go DOWN, negative goes up
+Shadows:
+	text-shadow: 1 2 3 4 (look below)
+		positive values = right
+		negative values = left
+			1. offset-x: horizontal shadow
+			2. offset-y: vertical shadow
+			3. blur-radius: default is 0, cannot be negative
+			4. color: 
+	box-shadow: 1 2 3 4 5 6
+			1. inset (optional) makes shadow inside the box
+			2. offset-x
+			3. offset-y
+			4. blur-radius 
+			5. spread-radius (positive values make shadow grow, negative shrinks)
+			6. color (optional)
+Round corners:
+	border-radius: 1 2 3 4 (px or %)
+		1. All
+		2. [top left/bottom right] [top right/bottom left]
+		3. [top left] [top right/bottom left] [bottom right]
+		4. [top left] [top right] [bottom right] [bottom left]
+			-Can also be defined with border-top/bottom-left/right-radius:
+Border images
+		border-image: 1 2 3 -> replaces border-style:
+			1. source: url(URL)
+			2. slice: (image size)
+			3. repeat: repeat, round (repeats but resizes to fit), stretch (single shape stretched)
+		MUST have border-width: non-zero
+Browser support:
+	Starts the whole name with a dash for some reason.
+		-webkit-[stuff] for chrome safari and newer opera
+		-moz- firefox
+		-ms- IE
+		-o- old opera
+Gradients:
+		*color x% where it's the % of the gradient length
+	linear-gradient(to {direction} OR Xdeg,color1,color2,etc)
+		*goes top to bottom if you don't specify direction
+		*degrees go clockwise. 0deg=top, 90deg=right, 180deg=bottom, 270deg=left
+	repeating-linear-gradient(same as above)
+		Looks like shit
+	radial-gradient({optional "circle" or "to" position}interior, exterior)
+		Perfect circle: start it with (circle, color, etc)
+		Position of shape:
+			radial-gradient(at 50px 10px, black, teal)
+				This is 50px from the left and 10px from the top
+			closest-side, farthest-side, closest-corner, farthest-corners
+				(position at 0% 0)
+Mobile:
+	viewport -> <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"> 
+		width, initial-scale (first zoom level), user-scalable (prevents zooming at "no") 
+		UNITS: (vw and vh) viewport width/height
+			1vmin = 1vw or 1vh (whichever is smaller)
+			1vmax = 1vw or 1vh (whichever is larger)
+				numbers are percentages of viewport, not container
+		If not fitting:
+			overflow: auto;
+	Graceful degradation: make desktop first, then modify
+	Progressive enhancement: mobile first design. 
+		Recommended ^^^	
+	@media (max-width: 800px) {css changes} is how to change it to mobile layout
+		<link rel="stylesheet" media="print and (min-width: 400px)" href="styles.css">
+			all - default
+			print - for print preview Mode
+			screen - intended for screens
+				Features: aspect-ratio, height, width, orientation, resolution
+DPR for images
+	Ex:
+	<img src="dog-small.jpg"
+		srcset="dog-medium.jpg 2x,
+				dog-large.jpg 3x"
+		alt="Dog">		
+	Use 3 images for different phones.
+		100px wide for 1x
+		200px wide for 2x
+		300px wide for 3x

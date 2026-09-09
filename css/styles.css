@@ -52,12 +52,12 @@ HEADER ANIMATION
 **********************/
 /****child of header***/
 #topName {
-  position: fixed;
-  left: 30px;
-  top: 5px;
-  font-weight: bold;
-  font-size: 2em;
-  display: flex; 
+	position: fixed;
+	left: 30px;
+	top: 5px;
+	font-weight: bold;
+	font-size: 2em;
+	display: flex; 
 }
 @keyframes phaseIn {
 from {
@@ -179,6 +179,9 @@ article {
 }
 strong {
 	color: #fff9e5;
+}
+.medWords {
+	font-size: 2em;
 }
 a {
 	color: #52f9ff;

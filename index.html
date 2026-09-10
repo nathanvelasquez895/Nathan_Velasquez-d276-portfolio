@@ -56,8 +56,8 @@
 <!---------Main content--------->
 <!------------------------------>
 <main>
-	<article>
-		<section>
+	<section>
+		<article>
 			<h2>Target Role: 
 			<br>Helpdesk / AV / IT Support Specialist</h2>
 				<!---different size images for mobile phones-->	
@@ -97,9 +97,9 @@
 					<strong>Core Strengths:</strong> Tier 1 Troubleshooting, Active Directory, Windows/Linux Administration, Custom Scripting, ServiceNow ITSM
 				</li>
 			</ul>
-		</section>
+		</article>
 	<hr>
-		<section class="tableBox">
+		<article class="tableBox">
 			<table>
 				<caption>Core skills and tools</caption>
 					<thead>
@@ -128,10 +128,10 @@
 						<td>Custom builds, drive data recovery, system diagnostics</td>
 						<td>Personal & Daily Lab Environments</td>
 					</tr>
-				</table>
-		</section>
+			</table>
+		</article>
 	<hr>
-		<section>
+		<article>
 			<h3>Featured Project Highlights</h3>
 			<ul class="list1">
 				<li>
@@ -177,9 +177,9 @@
 					</ul>
 				</li>
 			</ul>
-		</section>
+		</article>
 	<hr>
-		<section>
+		<article>
 			<h3>Work Experience</h3>
 			<ul class="list1">
 				<li>
@@ -225,8 +225,8 @@
 					</ul>
 				</li>
 			</ul>
-		<section>	
-	</article>	
+		</article>	
+	</section>	
 <!------------------------------>
 <!---------Footer--------------->
 <!------------------------------>
@@ -242,16 +242,25 @@
 		<i>
 			<a class="foot" target="_blank" style="font-size: 10px;" href="placeholderlink.html">Mesh Lines Vectors by Vecteezy</a> <!-- placeholder for https://www.vecteezy.com/free-vector/mesh-lines-->
 		</i>
+		<div id="date-display"></div>
 	</footer>
 </main>
-</body>
 <!------------------------------>
 <!---------Java scripts--------->
 <!------------------------------>
 <script>
-/** VIDEO VOLUME: Prevents ear blasting on the video**/
-document.querySelectorAll('video').forEach(video => 
-{video.volume = 0.3;});/**this means 30% volume**/
+/* Set video volume to a comfortable level (30%) */
+document.querySelectorAll('video').forEach(video => {
+	video.volume = 0.3;
+});
+
+/* Populate the date display div */
+let today = new Date().toLocaleDateString();
+document.getElementById("date-display").textContent = "Today's Date: " + today;
+
+/* Log page load status */
+console.log("Page loaded successfully!");
 </script>
+</body>
 </html>  
 

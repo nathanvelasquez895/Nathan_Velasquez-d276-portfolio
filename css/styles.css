@@ -183,6 +183,11 @@ strong {
 .medWords {
 	font-size: 2em;
 }
+mark {
+	background-color: #3a3f4b;
+	border-radius: 5px;
+	color: inherit;
+}
 a {
 	color: #52f9ff;
 	transition: color 0.2s ease-in-out;
@@ -356,7 +361,7 @@ input, textarea, select, option {
 	background-color: #0f172a;
 	color: white;
 	height: auto;
-	border: 2px bevel #000000;
+	border: 1px transparent;
 	border-radius: 4px;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
@@ -366,7 +371,7 @@ input:focus, select:focus, textarea:focus, option:focus {
 }
 /******* green border if box is required *******/
 input:invalid {
-   border: 3px solid #4a5e4f;
+   border: 2px solid #4a5e4f;
 }
 /********** make the label "message" in the right spot ****/
 #messageLabel {

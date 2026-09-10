@@ -56,8 +56,8 @@
 <!---------Main content--------->
 <!------------------------------>
 <main>
-	<article>
-		<section>
+	<section>
+		<article>
 			<h2>My Journey: 
                 <br>Accountability, Grit, and Problem Solving</h2>
 				<!---different size images for mobile phones-->	
@@ -86,8 +86,9 @@
                 I could to self-fund my higher education,</strong> refusing to let fear or circumstance 
                 hold me back from my goals.
             </p>
-		</section>
-        <section>
+		</article>
+    <hr>
+        <article>
             <h3>High-Pressure Accountability & Empathetic Support</h3>
             <p>
                 Before transitioning full-time into Computer Science, <strong>I served as the Manager of 
@@ -103,15 +104,16 @@
                 technical reporting accessible to everyone, I engineered custom AI-driven templates 
                 to help my team verify their documentation accuracy. 
             </p>
-        </section>
-        <section>
+        </article>
+    <hr>
+        <article>
             <h3>Adapting, Engineering, and Accelerating</h3>
             <p>
                 When I finally launched into my B.S. in Computer Science at WGU, <strong>I hadn't taken a 
                 math course in 16 years.</strong> Instead of letting that gap slow me down, I built my own 
-                study routines and engineering tools to bridge it. Through sheer focus, I 
+                study routines and engineering tools to bridge it. <mark>Through sheer focus, I 
                 accelerated through Applied Probability & Statistics, Calculus, and Discrete 
-                Mathematics <strong>in my very first term.</strong>
+                Mathematics in my very first term.</mark>
             </p>
             <p>
                 When standard course textbooks fell short and weren't working for my learning style, 
@@ -122,8 +124,9 @@
                 same hurdles,</strong> I published the project on GitHub and shared it with fellow students 
                 to help them succeed in the course as well.  
             </p>
-        </section>
-        <section>
+        </article>
+    <hr>
+        <article>
             <h2>What Drives Me</h2>
             <p>
                 Whether managing emergency protocols in residential care, maintaining total 
@@ -143,8 +146,8 @@
                     answers, <a href="career_goals.html#contact">let’s connect.</a>
                 </span>
             </p>
-        </section>
-	</article>	
+        </article>
+	</section>	
 <!------------------------------>
 <!---------Footer--------------->
 <!------------------------------>
@@ -160,8 +163,20 @@
 		<i>
 			<a class="foot" target="_blank" style="font-size: 10px;" href="placeholderlink.html">Mesh Lines Vectors by Vecteezy</a> <!-- placeholder for https://www.vecteezy.com/free-vector/mesh-lines-->
 		</i>
+		<div id="date-display"></div>
 	</footer>
 </main>
+<!------------------------------>
+<!---------Java scripts--------->
+<!------------------------------>
+<script>
+/* Populate the date display div */
+let today = new Date().toLocaleDateString();
+document.getElementById("date-display").textContent = "Today's Date: " + today;
+
+/* Log page load status */
+console.log("Page loaded successfully!");
+</script>
 </body>
 </html>  
 

@@ -494,6 +494,7 @@ footer {
 }
 .little-foot {
 	font-size: 10px;
+	font-style: italic;
 }
 .foot:hover {
 	color: #d9d6ff;

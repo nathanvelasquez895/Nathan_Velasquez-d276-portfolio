@@ -184,7 +184,7 @@ strong {
 	font-size: 2em;
 }
 mark {
-	background-color: #3a3f4b;
+	background-color: #192e2e;
 	border-radius: 5px;
 	color: inherit;
 }
@@ -489,6 +489,10 @@ FANCY RADIO BUTTONS
 ------FOOTER-------
 *****************/
 footer {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	width: 100%;
 	color: gray;
 	text-shadow: none;
 	margin: 10px;
@@ -496,6 +500,9 @@ footer {
 .foot {
 	color: #8f90a3;
 	transition: all 0.2s ease-in-out;
+}
+.little-foot {
+	font-size: 10px;
 }
 .foot:hover {
 	color: #d9d6ff;
